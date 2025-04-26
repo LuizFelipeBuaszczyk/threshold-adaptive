@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold Adaptativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trabalho Final de Programação Paralela e Distribuida</h1>
+        </header>
+        <main>
+            <div id="divInputImage">
+                <h1>Selecione uma imagem</h1>
+                <input type="file" id="inputImage" name="image">
+                <canvas id="showInputImage" class="imgStyle" width="250" height="250"></canvas>
+            </div>
+            <div id="manipulationOptions">
+                <div id="asyncCheck">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label>Assíncrona</label>
+                </div>
+                <input type="number" name="inputNumber" id="inputNumber">
+                <div id="divRange">
+                    <div id="labelRange">
+            
+                    </div>
+                    <input type="range" name="kernelRange" id="kernelRange" min="3" max="75" step="2">
+                </div>
+                <button id="proccessButton">Processar</button>
+            </div>
+            <div id="divOutputImage">
+                <h1>Resultado do Processamento</h1>
+                <canvas id="outputImage" class="imgStyle" width="250" height="250"></canvas>
+                <div id="executionTime"></div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>
