@@ -1,0 +1,24 @@
+
+services:
+  threshold_adaptive:
+    container_name: threshold_adaptive
+    build: ./threshold
+    networks:
+      - net-paralela
+  
+
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - threshold_adaptive
+    networks:
+      - net-paralela
+
+networks:
+  net-paralela:
+    driver: bridge 

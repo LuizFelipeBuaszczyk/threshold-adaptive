@@ -104,9 +104,7 @@ function thresholdImage(){
     const matrixJson = transformIMGtoMATRIX(document.getElementById('showInputImage'));
     const kernel = document.getElementById("kernelRange").value;
 
-    let endpoint = `http://localhost:8080/${isAsync}/threshold?value=${value}&kernel=${kernel}`;
-
-    console.log(endpoint)
+    let endpoint = `/api/${isAsync}/threshold?value=${value}&kernel=${kernel}`;
 
     fetch(endpoint, {
         method:'POST',
